@@ -489,131 +489,32 @@ section{padding:6rem max(2rem,8vw);}
 /* ═══════════════════════════════════════
    CONTACT
 ═══════════════════════════════════════ */
-/* ── CONTACT SECTION ── */
-.contact-section {
-  background: var(--bg);
-  position: relative;
-  overflow: hidden;
-}
-
-/* layered atmospheric glow */
-.contact-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(201,168,76,.06) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 20% 100%, rgba(56,178,172,.04) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 80% 100%, rgba(201,168,76,.03) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-/* subtle top border glow */
-.contact-section::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 10%; right: 10%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(201,168,76,.35), transparent);
-  pointer-events: none;
-}
-
-.contact-inner {
-  max-width: 680px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-
-/* email link */
-.contact-email {
-  display: inline-flex;
-  align-items: center;
-  gap: .6rem;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: .01em;
-  color: var(--gold);
-  text-decoration: none;
-  position: relative;
-  padding-bottom: .25rem;
-  margin: 1.8rem 0 2.4rem;
-  transition: color .3s;
-}
-
-/* animated underline */
-.contact-email::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  transform: scaleX(0.4);
-  opacity: .5;
-  transition: transform .4s cubic-bezier(.4,0,.2,1), opacity .4s;
-}
-.contact-email:hover { color: var(--gold2); }
-.contact-email:hover::after { transform: scaleX(1); opacity: 1; }
-
-/* social pill row */
-.contact-socials {
-  display: flex;
-  gap: .9rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.contact-social {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  font-size: .72rem;
-  font-weight: 400;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  font-family: 'DM Mono', monospace;
-  padding: .7rem 1.6rem;
-  border-radius: 50px;
-  border: 1px solid var(--border);
-  color: var(--muted);
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: color .35s, border-color .35s, transform .35s;
-}
-
-/* fill sweep on hover */
-.contact-social::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50px;
-  background: rgba(201,168,76,.07);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform .4s cubic-bezier(.4,0,.2,1);
-}
-.contact-social:hover::before { transform: scaleX(1); transform-origin: left; }
-.contact-social:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  transform: translateY(-2px);
-}
-
-/* arrow nudge on hover */
-.contact-social span.arrow {
-  display: inline-block;
-  transition: transform .3s;
-  font-style: normal;
-}
-.contact-social:hover span.arrow { transform: translate(2px, -2px); }
-
-/* responsive */
-@media (max-width: 600px) {
-  .contact-socials { gap: .6rem; }
-  .contact-social { padding: .6rem 1.2rem; font-size: .68rem; }
-  .contact-email { font-size: .9rem; }
-}
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <div class="reveal">
+      <div class="section-label" style="justify-content:center">Contact</div>
+      <h2 class="section-h2">Let's Build<br><em>Something Great</em></h2>
+      <p style="color:var(--muted);font-size:.93rem;line-height:1.9;max-width:480px;margin:0 auto;">
+        Open to internships and entry-level software engineering roles.
+        I'd love to hear about your team and what you're building.
+      </p>
+      <a href="mailto:sivasanthoshmanyam48@gmail.com" class="contact-email">
+        sivasanthoshmanyam48@gmail.com ↗
+      </a>
+      <div class="contact-socials">
+        <a href="https://github.com/99220040626" target="_blank" class="contact-social">
+          GitHub ↗
+        </a>
+        <a href="https://linkedin.com/in/manyam-siva-santhosh-kumar-reddy-297a9531b/" target="_blank" class="contact-social">
+          LinkedIn ↗
+        </a>
+        <a href="https://99220040626.github.io/portfolio/" target="_blank" class="contact-social">
+          Portfolio ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section> 
 
 /* ═══════════════════════════════════════
    FOOTER
